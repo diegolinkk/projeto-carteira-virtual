@@ -37,7 +37,7 @@ Na tela inicial, ele terá um botão de adicionar uma transação
     - [x] criar form de login
     - [x] criar validação de login
     - [x] criar botão que manda pro form de cadastro
-    - [ ] criar form de cadastro
-    - [ ] criar função de cadastro
+    - [x] criar form de cadastro
+    - [x] criar função de cadastro
 
 ### tarefas - feito
