@@ -8,7 +8,7 @@
     <title>Carteira virtual</title>
 </head>
 <body>
-    <div class="container-fluid">
+    <div class="container-sm">
         @yield('content')
     </div>
 

@@ -23,16 +23,15 @@ Nesse primeiro momento, o usuário terá apenas uma carteira
 
 ## Feature 1
 O usuário faz login e na primeira tela ja olha a sua carteira.
-Nessa tela inicial ele terá um botão de visualizar todas as transações.
+Nessa tela inicial ele poderá visualizar todas as transações.
 Na tela inicial, ele terá um botão de adicionar uma transação
 
 ### tarefas - backlog
-- [ ] criar tela de visualizar carteira
-- [ ] criar tela de visualizar transações
-- [ ] criar tela de adicionar transações
 - [ ] fazer bateria de testes
 
 ### tarefas - fazendo
+- [ ] criar tela de adicionar transações
+obs - ainda não tem objeto no banco de dados
 
 ### tarefas - feito
 - [x] criar tela de login
@@ -42,3 +41,6 @@ Na tela inicial, ele terá um botão de adicionar uma transação
     - [x] criar form de cadastro
     - [x] criar função de cadastro
     - [x] criar testes para feature de login
+
+- [x] criar tela de visualizar carteira
+- [x] criar tela de visualizar transações
