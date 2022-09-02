@@ -33,11 +33,12 @@ Na tela inicial, ele terá um botão de adicionar uma transação
 - [ ] fazer bateria de testes
 
 ### tarefas - fazendo
-- [ ] criar tela de login
+
+### tarefas - feito
+- [x] criar tela de login
     - [x] criar form de login
     - [x] criar validação de login
     - [x] criar botão que manda pro form de cadastro
     - [x] criar form de cadastro
     - [x] criar função de cadastro
-
-### tarefas - feito
+    - [x] criar testes para feature de login
