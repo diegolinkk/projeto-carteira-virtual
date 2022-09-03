@@ -22,7 +22,7 @@ Nesse primeiro momento, o usuário terá apenas uma carteira
 
 
 ## Feature 1
-O usuário faz login e na primeira tela ja olha a sua carteira.
+O usuário faz login e na primeira tela ja olha a suas carteiras e seu saldo consolidado.
 Nessa tela inicial ele poderá visualizar todas as transações.
 Na tela inicial, ele terá um botão de adicionar uma transação
 
@@ -30,10 +30,20 @@ Na tela inicial, ele terá um botão de adicionar uma transação
 - [ ] fazer bateria de testes
 
 ### tarefas - fazendo
-- [ ] criar tela de adicionar transações
-obs - ainda não tem objeto no banco de dados
+- [ ] projetar modelos
+    - [ ] Wallet
+    - [ ] Transaction
+    - [ ] Category
+    - [ ] adequações no modelo de User
+- [ ] criar migrations
+- [ ] integrar modelos
+    - [ ] carteiras
+    - [ ] transações
+- [ ] criar um service que vai converter centavos para reais e vice-versa
 
 ### tarefas - feito
+- [x] criar tela de adicionar transações
+obs - ainda não tem objeto no banco de dados
 - [x] criar tela de login
     - [x] criar form de login
     - [x] criar validação de login

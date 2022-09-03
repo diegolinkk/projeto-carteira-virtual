@@ -6,7 +6,7 @@
     </div>
         <div> <h1>Seu saldo: </h1></div>
         <div> <h2 class="text-primary">R$ 100,00 </h2></div>
-        <a href="#" class="btn btn-primary">Adicionar transação</a>
+        <a href="{{route('transaction.create')}}" class="btn btn-primary">Adicionar transação</a>
     </div>
     <div>
         <h2>Suas transações recentes:</h2>

@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\LoginController;
+use App\Http\Controllers\TransactionController;
 use App\Http\Controllers\WalletController;
 use Illuminate\Support\Facades\Route;
 
@@ -17,6 +18,14 @@ use Illuminate\Support\Facades\Route;
 
 Route::middleware('auth')->group(function(){
     Route::get('/',[WalletController::class,'index'])->name('index');
+
+    Route::controller(TransactionController::class)->group(function(){
+        Route::get('/transaction/create', 'create')->name("transaction.create");
+        Route::post('/transaction/create', 'store');
+    });
+
+
+    
     
 });
 
