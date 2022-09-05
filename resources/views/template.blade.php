@@ -8,8 +8,16 @@
     <title>Carteira virtual</title>
 </head>
 <body>
-    <div class="container-sm">
-        @yield('content')
+
+    <div class="row">
+        <aside class="col">
+            <u>
+                <li> <a href="{{route('index')}}">Página Inicial</a></li>
+            </u>
+        </aside>
+        <div class="col-11 me-3">
+            @yield('content')
+        </div>
     </div>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>

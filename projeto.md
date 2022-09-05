@@ -1,19 +1,24 @@
 # Carteira Virtual
 Projeto que gerencia carteiras virtuais
 
-## componentes
+## recursos
+transactions
+    value
+    date
+    name
+    observation
+    category_id (fk)
+    wallet_id (fk)
 
-transação
-    valor
-    data/hora
-    nome
-    categoria (fk)
-    carteira (fk)
+wallets
+    user_id(fk)
+    name
+    balance
 
-carteira
-    user(fk)
-    nome
-    saldo
+user
+    name
+    email
+    password
 
 O saldo da carteira é atualizado à cada transação (seja incluindo, atualizando ou removendo).
 Nesse primeiro momento, o usuário terá apenas uma carteira
