@@ -12,13 +12,17 @@ transactions
 
 wallets
     user_id(fk)
-    name
+    nam
     balance
 
 user
     name
     email
     password
+
+category
+    name
+    user_id(fk)
 
 O saldo da carteira é atualizado à cada transação (seja incluindo, atualizando ou removendo).
 Nesse primeiro momento, o usuário terá apenas uma carteira
