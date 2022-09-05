@@ -29,7 +29,6 @@ Nesse primeiro momento, o usuário terá apenas uma carteira
 
 # features
 
-
 ## Feature 1
 O usuário faz login e na primeira tela ja olha a suas carteiras e seu saldo consolidado.
 Nessa tela inicial ele poderá visualizar todas as transações.
@@ -39,18 +38,25 @@ Na tela inicial, ele terá um botão de adicionar uma transação
 - [ ] fazer bateria de testes
 
 ### tarefas - fazendo
-- [ ] projetar modelos
-    - [ ] Wallet
-    - [ ] Transaction
-    - [ ] Category
-    - [ ] adequações no modelo de User
-- [ ] criar migrations
-- [ ] integrar modelos
-    - [ ] carteiras
-    - [ ] transações
-- [ ] criar um service que vai converter centavos para reais e vice-versa
+- [ ] Criar página de criação de carteiras
+- [ ] Criar página de criação de categorias
+- [ ] Criar função de criação de categorias
+- [ ] Criar função de criação de transações
+    - lembrando que essas transações somam no saldo da respectiva carteira
+- [ ] Exibir carteiras reais na dashboard
+- [ ] Exibir transações reais na dashboard
 
 ### tarefas - feito
+- [x] criar um service que vai converter centavos para reais e vice-versa
+- [x] projetar modelos
+    - [x] Wallet
+    - [x] Transaction
+    - [x] Category
+    - [x] adequações no modelo de User
+- [x] criar migrations
+- [x] integrar modelos
+    - [x] carteiras
+    - [x] transações
 - [x] criar tela de adicionar transações
 obs - ainda não tem objeto no banco de dados
 - [x] criar tela de login
