@@ -4,10 +4,12 @@
         <div> <h2 class="text-secondary"> Seja bem vindo: {{Auth::user()->name}} </h2></div>
         <h3>Suas carteiras</h3>
         <ul>
-            <li>Carteira 1 - saldo R$: 100,00</li>
-            <li>Carteira 2 - saldo R$: 100,00</li>
-            <li>Carteira 3 - saldo R$: 100,00</li>
+            @foreach($wallets as $wallet)
+            <li>{{$wallet->name}} - saldo R$: {{$wallet->balance}}</li>
+            @endforeach
         </ul>
+            
+        <a href="{{route('wallet.create')}}" class="btn btn-primary">Adicionar carteira</a>
         <div> <h1>Seu saldo: </h1></div>
         <div> <h2 class="text-primary">R$ 100,00 </h2></div>
         <a href="{{route('transaction.create')}}" class="btn btn-primary">Adicionar transação</a>

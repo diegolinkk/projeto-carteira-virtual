@@ -17,16 +17,19 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::middleware('auth')->group(function(){
-    Route::get('/',[WalletController::class,'index'])->name('index');
 
+    //wallet routes
+    route::controller(WalletController::class)->group(function(){
+        Route::get('/','index')->name('index');
+        Route::get('/wallet/create','create')->name('wallet.create');
+        Route::post('/wallet/create','store');
+    });
+
+    //transaction routes
     Route::controller(TransactionController::class)->group(function(){
         Route::get('/transaction/create', 'create')->name("transaction.create");
         Route::post('/transaction/create', 'store');
     });
-
-
-    
-    
 });
 
 //login routes

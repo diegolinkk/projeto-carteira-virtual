@@ -12,7 +12,7 @@ transactions
 
 wallets
     user_id(fk)
-    nam
+    name
     balance
 
 user

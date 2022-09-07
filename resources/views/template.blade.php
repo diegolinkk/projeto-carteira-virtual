@@ -9,12 +9,15 @@
 </head>
 <body>
 
+    @auth
     <div class="row">
         <aside class="col">
             <u>
                 <li> <a href="{{route('index')}}">Página Inicial</a></li>
             </u>
         </aside>
+    @endauth
+
         <div class="col-11 me-3">
             @yield('content')
         </div>
