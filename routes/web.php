@@ -3,6 +3,7 @@
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\TransactionController;
 use App\Http\Controllers\WalletController;
+use App\Http\Controllers\CategoryController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -30,6 +31,14 @@ Route::middleware('auth')->group(function(){
         Route::get('/transaction/create', 'create')->name("transaction.create");
         Route::post('/transaction/create', 'store');
     });
+
+    //category routes
+    Route::controller(CategoryController::class)->group(function(){
+        Route::get('/category/index','index')->name('category.index');
+        Route::get('/category/create','create')->name('category.create');
+        Route::post('/category/create','store');
+    });
+
 });
 
 //login routes

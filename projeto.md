@@ -38,15 +38,15 @@ Na tela inicial, ele terá um botão de adicionar uma transação
 - [ ] fazer bateria de testes
 
 ### tarefas - fazendo
-- [ ] Criar página de criação de carteiras
-- [ ] Criar página de criação de categorias
-- [ ] Criar função de criação de categorias
 - [ ] Criar função de criação de transações
     - lembrando que essas transações somam no saldo da respectiva carteira
 - [ ] Exibir carteiras reais na dashboard
 - [ ] Exibir transações reais na dashboard
 
 ### tarefas - feito
+- [x] Criar página de criação de categorias
+- [x] Criar função de criação de categorias
+- [x] Criar página de criação de carteiras
 - [x] criar um service que vai converter centavos para reais e vice-versa
 - [x] projetar modelos
     - [x] Wallet

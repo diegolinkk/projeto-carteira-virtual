@@ -12,9 +12,12 @@
     @auth
     <div class="row">
         <aside class="col">
-            <u>
-                <li> <a href="{{route('index')}}">Página Inicial</a></li>
-            </u>
+            <ul>
+                <li> <a href="{{route('index')}}">Inicio</a></li>
+                <li> <a href="{{route('category.index')}}">Categorias</a></li>
+                <li> <a href="{{route('index')}}">Carteiras</a></li>
+                <li> <a href="{{route('index')}}">Transações</a></li>
+            </ul>
         </aside>
     @endauth
 
