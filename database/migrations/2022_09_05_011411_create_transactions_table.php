@@ -29,12 +29,9 @@ return new class extends Migration
                 ->constrained()
                 ->nullOnDelete();
 
-
-            // observation
-            // category_id (fk)
-            // wallet_id (fk)
-
-
+            $table->foreignId('user_id')
+                ->constrained()
+                ->nullOnDelete();
         });
     }
 
