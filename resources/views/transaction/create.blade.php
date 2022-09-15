@@ -35,7 +35,7 @@
 
         <div class="mb-3">
             <label for="observation" class="form-label">Observação:</label>
-            <textarea class="form-control" name="observation" id="observation" rows="3"> </textarea>
+            <textarea required class="form-control" name="observation" id="observation" rows="3"></textarea>
         </div>
         <input type="submit" value="Enviar" class="btn btn-primary">
     </form>

@@ -10,6 +10,7 @@ use Illuminate\Database\Eloquent\Model;
 class Wallet extends Model
 {
     use HasFactory;
+    protected $appends = ['balance_in_reais'];
 
     public function user()
     {
@@ -21,14 +22,13 @@ class Wallet extends Model
         return $this->hasMany(Transaction::class);
     }
 
-    protected function balance():Attribute
+    protected function balanceInReais() : Attribute
     {
-        return new Attribute(
-            //balance é um atributo da Model
-            get: function($balance){
-                $reais_balance = MoneyConverter::convertCentavosToReais($balance);
-                return number_format($reais_balance,2);
-            },
+        return Attribute::make(
+            get: function($value,$attributes){
+                $reais =  MoneyConverter::convertCentavosToReais($attributes['balance']);
+                return number_format($reais,2);
+            }
         );
     }
 

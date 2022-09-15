@@ -8,7 +8,7 @@ use App\Models\Wallet;
 use App\Services\MoneyConverter;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
-
+use Illuminate\Support\Facades\DB;
 
 class TransactionController extends Controller
 {
@@ -25,15 +25,31 @@ class TransactionController extends Controller
 
     function store(Request $request)
     {
+        //convert Reais value to Centavos
+        $value = MoneyConverter::convertReaisToCentavos($request->value);
 
+        //getting wallet
+        $walletId = $request->wallet_id;
+        $wallet = Wallet::find($walletId);
+        
+        DB::beginTransaction();
+        
         $transaction = new Transaction();
-        $transaction->value = MoneyConverter::convertReaisToCentavos($request->value);
+        $transaction->value = $value;
         $transaction->name = $request->name;
         $transaction->observation = $request->observation;
         $transaction->date = $request->date;
         $transaction->category_id = $request->category_id;
-        $transaction->wallet_id = $request->wallet_id;
+        $transaction->wallet_id = $walletId;
+        $transaction->user_id = Auth::user()->id;
         $transaction->save();
-        return $transaction;
+
+        //add balance to wallet
+        $wallet->balance = $wallet->balance + $value;
+        $wallet->save();
+
+        DB::commit();
+
+        return redirect()->route('index');
     }
 }

@@ -39,7 +39,7 @@ Na tela inicial, ele terá um botão de adicionar uma transação
 
 ### tarefas - fazendo
 - [x] Criar função de criação de transações
-    [ ] Adicionar coluna user_id nas transações
+    [x] Adicionar coluna user_id nas transações
     [ ] Ao adicionar transação, o saldo da respectiva carteira deve ser atualizado
 - [ ] Exibir carteiras reais na dashboard
 - [ ] Exibir transações reais na dashboard

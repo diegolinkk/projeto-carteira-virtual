@@ -5,7 +5,7 @@
         <h3>Suas carteiras</h3>
         <ul>
             @foreach($wallets as $wallet)
-            <li>{{$wallet->name}} - saldo R$: {{$wallet->balance}}</li>
+            <li>{{$wallet->name}} - saldo R$: {{$wallet->balance_in_reais}}</li>
             @endforeach
         </ul>
             
