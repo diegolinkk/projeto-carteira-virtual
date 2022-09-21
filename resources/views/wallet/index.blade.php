@@ -11,19 +11,16 @@
             
         <a href="{{route('wallet.create')}}" class="btn btn-primary">Adicionar carteira</a>
         <div> <h1>Seu saldo: </h1></div>
-        <div> <h2 class="text-primary">R$ 100,00 </h2></div>
+        <div> <h2 class="text-primary">{{$totalBalance}} </h2></div>
         <a href="{{route('transaction.create')}}" class="btn btn-primary">Adicionar transação</a>
     </div>
     <div>
 
         <h2>Suas transações recentes:</h2>
         <ul class="list-group">
-            <li class="list-group-item">Nome da transação - 02/09/2022 - R$ 150,00</li>
-            <li class="list-group-item">Nome da transação - 02/09/2022 - R$ 150,00</li>
-            <li class="list-group-item">Nome da transação - 02/09/2022 - R$ 150,00</li>
-            <li class="list-group-item">Nome da transação - 02/09/2022 - R$ 150,00</li>
-            <li class="list-group-item">Nome da transação - 02/09/2022 - R$ 150,00</li>
-            <li class="list-group-item">Nome da transação - 02/09/2022 - R$ 150,00</li>
+            @foreach($transactions as $transaction)
+                <li class="list-group-item">{{date('d/m/Y',strtotime($transaction->date))}}  - {{$transaction->name}} - R$ {{$transaction->value_in_reais}}</li>
+            @endforeach
         </ul>
     </div>
 @endsection

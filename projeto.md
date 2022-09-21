@@ -35,16 +35,19 @@ Nessa tela inicial ele poderá visualizar todas as transações.
 Na tela inicial, ele terá um botão de adicionar uma transação
 
 ### tarefas - backlog
+- [ ] adicionar despesa (transação negativa)
+- [ ] diferenciar na lista despesa de receita (com cores simples mesmo)
 - [ ] fazer bateria de testes
 
 ### tarefas - fazendo
 - [x] Criar função de criação de transações
-    [x] Adicionar coluna user_id nas transações
-    [ ] Ao adicionar transação, o saldo da respectiva carteira deve ser atualizado
-- [ ] Exibir carteiras reais na dashboard
-- [ ] Exibir transações reais na dashboard
+- [x] Adicionar coluna user_id nas transações
+- [x] O saldo deverá exibir a soma de todas as carteiras do usuário
 
 ### tarefas - feito
+- [x] Exibir transações reais na dashboard
+- [x] Exibir carteiras reais na dashboard
+    [x] Ao adicionar transação, o saldo da respectiva carteira deve ser atualizado
 - [x] Criar página de criação de categorias
 - [x] Criar função de criação de categorias
 - [x] Criar página de criação de carteiras
